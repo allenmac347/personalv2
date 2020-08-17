@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import 'semantic-ui-css/semantic.min.css'
-import {Menu, Grid, Container, List, Header, Image} from 'semantic-ui-react'
+import {Menu, Grid, Container, List, Header, Image} from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
 
 
 class App extends React.Component {
@@ -54,33 +54,6 @@ class NavigationBar extends React.Component {
   }
 }
 
-
-function Welcome(){
-  return(
-    <Container>
-    <Grid >
-      <Grid.Row centered columns={2}>
-        <Grid.Column width={4}>
-          <Header as='h2'>My name is Allen Macaspac and welcome to my page!</Header>
-        </Grid.Column>
-        <Grid.Column width={3}>
-          <p>This is a placeholder</p>
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row>
-        <br></br>
-        <br></br>
-      </Grid.Row>
-      <Grid.Row centered columns={1}>
-        <Grid.Column width={4}>
-          <Header as='h4'>I am an aspiring Software Engineer based in Ann Arbor interested in computer optimization and clean UI.</Header>
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
-    </Container>
-  );
-}
-
 function ContentSection(){
   return(
     <Grid relaxed divided='vertically' textAlign='center'>
@@ -126,6 +99,33 @@ function ContentSection(){
     </Grid>
   );
 }
+
+function Welcome(){
+  return(
+    <Container>
+    <Grid >
+      <Grid.Row centered columns={2}>
+        <Grid.Column width={4}>
+          <Header as='h2'>My name is Allen Macaspac and welcome to my page!</Header>
+        </Grid.Column>
+        <Grid.Column width={3}>
+          <p>This is a placeholder</p>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <br></br>
+        <br></br>
+      </Grid.Row>
+      <Grid.Row centered columns={1}>
+        <Grid.Column width={4}>
+          <Header as='h4'>I am an aspiring Software Engineer based in Ann Arbor interested in computer optimization and clean UI.</Header>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+    </Container>
+  );
+}
+
 
 function Education(){
   return(
