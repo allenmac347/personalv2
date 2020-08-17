@@ -83,27 +83,42 @@ function Welcome(){
 
 function ContentSection(){
   return(
-    <Grid divided='vertically' textAlign='center'>
+    <Grid relaxed divided='vertically' textAlign='center'>
       <Grid.Row columns={1} verticalAlign='middle'>
         <Grid.Column>
           <Welcome />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row columns={1}>
-        <Grid.Column>
-          <About/>
+        <Grid.Column stretched>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Education />
+            <br></br>
+            <br></br>
+            <br></br>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row columns={1}>
         <Grid.Column>
-          <div style={{height:'50vh'}}>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Tech />
+            <br></br>
+            <br></br>
+            <br></br>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row columns={1}>
+        <Grid.Column>
             <Project />
-          </div>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row columns={1}>
         <Grid.Column>
-          <div style={{height:'25vh'}}>
+          <div style={{height:'10vh'}}>
             <Contact/>
           </div>
         </Grid.Column>
@@ -112,29 +127,53 @@ function ContentSection(){
   );
 }
 
-function About(){
+function Education(){
   return(
     <Container>
-      <Grid>
+      <Grid stackable>
         <Grid.Row columns={2}>
           <Grid.Column>
-            <h2>About Me</h2>
-            <p>I am currently a rising senior at the Universiy of Michigan graduating this December 2020.</p>
-            <p>I've taken course work in Data Structures and Algorithms, Operating Systems, and Web App Development.</p>
-            <p>Outside the classroom, I also like to code in my free time, whether it's working on personal projects or solving leetcode problems.</p>
-            <p>Here are some of the technologies I am familiar with:</p>
+            <EducationContent/>
           </Grid.Column>
             <Grid.Column>
-              <Tech/>
+              <p>This is just a placeholder</p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
-
     </Container>
   );
 }
 
+function EducationContent(){
+  return(
+    <Container>
+      <h2>Educational Background</h2>
+      <p>I am currently a rising senior at the Universiy of Michigan graduating this December 2020.</p>
+      <p>I've taken course work in Data Structures and Algorithms, Operating Systems, and Web App Development.</p>
+      <p>Outside the classroom, I also like to code in my free time, whether it's working on personal projects or solving leetcode problems.</p>
+    </Container>
+  );
+}
+
+
 function Tech(){
+  return(
+    <Container>
+      <Grid stackable>
+        <Grid.Row columns={2}>
+          <Grid.Column>
+            <p>This is just a placeholder</p>
+          </Grid.Column>
+            <Grid.Column>
+              <TechContent/>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Container>
+  );
+}
+
+function TechContent(){
   return(
     <Container>
       <h2>Technology Experience</h2>
