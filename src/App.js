@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
-import {Menu, Grid, Container, List, Header} from 'semantic-ui-react'
+import {Menu, Grid, Container, List, Header, Image} from 'semantic-ui-react'
 
 
 class App extends React.Component {
@@ -57,15 +57,27 @@ class NavigationBar extends React.Component {
 
 function Welcome(){
   return(
+    <Container>
     <Grid >
-      <Grid.Column>
-        <Header as='h1'>My name is Allen Macaspac and welcome to my page!</Header>
-        <Header as='h2'>I am an aspiring Software Engineer based in Ann Arbor interested in computer optimization and clean UI.</Header>
-      </Grid.Column>
-      <Grid.Column>
-        <p>This is a placeholder</p>
-      </Grid.Column>
+      <Grid.Row centered columns={2}>
+        <Grid.Column width={4}>
+          <Header as='h2'>My name is Allen Macaspac and welcome to my page!</Header>
+        </Grid.Column>
+        <Grid.Column width={3}>
+          <p>This is a placeholder</p>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <br></br>
+        <br></br>
+      </Grid.Row>
+      <Grid.Row centered columns={1}>
+        <Grid.Column width={4}>
+          <Header as='h4'>I am an aspiring Software Engineer based in Ann Arbor interested in computer optimization and clean UI.</Header>
+        </Grid.Column>
+      </Grid.Row>
     </Grid>
+    </Container>
   );
 }
 
@@ -103,11 +115,29 @@ function ContentSection(){
 function About(){
   return(
     <Container>
-      <h2>Education and Technical Background</h2>
-      <p>I am currently a rising senior at the Universiy of Michigan graduating this December 2020.</p>
-      <p>I've taken course work in Data Structures and Algorithms, Operating Systems, and Web App Development.</p>
-      <p>Outside the classroom, I also like to code in my free time, whether it's working on personal projects or solving leetcode problems.</p>
-      <p>Here are some of the technologies I am familiar with:</p>
+      <Grid>
+        <Grid.Row columns={2}>
+          <Grid.Column>
+            <h2>About Me</h2>
+            <p>I am currently a rising senior at the Universiy of Michigan graduating this December 2020.</p>
+            <p>I've taken course work in Data Structures and Algorithms, Operating Systems, and Web App Development.</p>
+            <p>Outside the classroom, I also like to code in my free time, whether it's working on personal projects or solving leetcode problems.</p>
+            <p>Here are some of the technologies I am familiar with:</p>
+          </Grid.Column>
+            <Grid.Column>
+              <Tech/>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+
+    </Container>
+  );
+}
+
+function Tech(){
+  return(
+    <Container>
+      <h2>Technology Experience</h2>
       <Grid textAlign='center'>
         <Grid.Column>
           <List horizontal relaxed>
@@ -138,6 +168,7 @@ function About(){
     </Container>
   );
 }
+
 function Project(){
   return(
     <Container>
